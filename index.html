@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>北京心潮科技有限公司 — 心之所向 · 潮起未来</title>
+  <meta name="description" content="北京心潮科技有限公司，专注人工智能、大数据与数字化创新，以科技驱动未来。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Noto+Sans+SC:wght@300;400;500;700;900&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2300e5ff'/%3E%3Cstop offset='1' stop-color='%237c4dff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M15 70 Q30 20 50 50 T85 30' stroke='url(%23g)' stroke-width='10' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <!-- 全屏粒子背景 -->
+  <canvas id="particle-canvas"></canvas>
+  <!-- 光标光晕 -->
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <!-- 页面加载动画 -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-core">
+      <div class="preloader-ring"></div>
+      <div class="preloader-ring r2"></div>
+      <div class="preloader-ring r3"></div>
+      <span class="preloader-text">XINCHAO</span>
+    </div>
+  </div>
+
+  <!-- 导航栏 -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="#hero">
+        <span class="brand-mark">
+          <svg viewBox="0 0 100 100" width="34" height="34">
+            <defs>
+              <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#00e5ff"/><stop offset="1" stop-color="#7c4dff"/>
+              </linearGradient>
+            </defs>
+            <path d="M15 70 Q30 20 50 50 T85 30" stroke="url(#lg)" stroke-width="10" fill="none" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand-text">心潮科技<em>XINCHAO&nbsp;TECH</em></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#hero" class="active">首页</a>
+        <a href="#about">关于我们</a>
+        <a href="#services">核心业务</a>
+        <a href="#tech">技术实力</a>
+        <a href="#contact">联系我们</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="菜单"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- ===== 首屏 ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="hero-badge reveal"><span class="pulse-dot"></span>AI · 大数据 · 数字化未来</div>
+      <h1 class="hero-title">
+        <span class="line reveal d1">心之所向</span>
+        <span class="line grad reveal d2">潮起未来</span>
+      </h1>
+      <p class="hero-sub reveal d3">北京心潮科技有限公司 —— 以前沿科技为引擎，融合人工智能、大数据与云计算，<br class="pc-only" />为企业构建通往数字未来的智能桥梁。</p>
+      <div class="hero-cta reveal d4">
+        <a href="#services" class="btn btn-primary"><span>探索核心业务</span><i class="btn-arrow">→</i></a>
+        <a href="#contact" class="btn btn-ghost"><span>联系我们</span></a>
+      </div>
+      <div class="hero-stats reveal d5">
+        <div class="stat"><span class="stat-num" data-count="2016">0</span><span class="stat-label">创立年份</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num" data-count="50" data-suffix="+">0</span><span class="stat-label">合作伙伴</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num" data-count="120" data-suffix="+">0</span><span class="stat-label">交付项目</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num" data-count="99" data-suffix="%">0</span><span class="stat-label">客户满意度</span></div>
+      </div>
+    </div>
+    <div class="hero-orb orb-a" aria-hidden="true"></div>
+    <div class="hero-orb orb-b" aria-hidden="true"></div>
+    <a class="scroll-hint" href="#about" aria-label="向下滚动"><span class="mouse"><span class="wheel"></span></span></a>
+  </section>
+
+  <!-- ===== 关于我们 ===== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">// ABOUT US</span>
+        <h2 class="section-title">关于<span class="grad-text">心潮</span></h2>
+      </div>
+      <div class="about-layout">
+        <div class="about-visual reveal">
+          <div class="holo-frame">
+            <div class="holo-scan"></div>
+            <div class="holo-core">
+              <svg viewBox="0 0 200 200" class="holo-svg">
+                <defs>
+                  <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#00e5ff"/><stop offset="1" stop-color="#7c4dff"/>
+                  </linearGradient>
+                </defs>
+                <circle cx="100" cy="100" r="78" fill="none" stroke="url(#hg)" stroke-width="1" stroke-dasharray="4 6" class="rot-slow"/>
+                <circle cx="100" cy="100" r="58" fill="none" stroke="url(#hg)" stroke-width="1" opacity="0.5" class="rot-rev"/>
+                <path d="M40 120 Q70 60 100 100 T160 80" stroke="url(#hg)" stroke-width="6" fill="none" stroke-linecap="round"/>
+                <circle cx="100" cy="100" r="92" fill="none" stroke="url(#hg)" stroke-width="0.6" opacity="0.35" class="rot-slow"/>
+              </svg>
+            </div>
+            <div class="holo-corner tl"></div><div class="holo-corner tr"></div>
+            <div class="holo-corner bl"></div><div class="holo-corner br"></div>
+          </div>
+        </div>
+        <div class="about-copy">
+          <h3 class="reveal">以科技之力，掀动时代浪潮</h3>
+          <p class="reveal">北京心潮科技有限公司成立于北京怀柔，是一家专注于<strong>人工智能、大数据分析与企业数字化转型</strong>的高新科技企业。我们相信，每一次技术的跃迁，都始于对未来的想象。</p>
+          <p class="reveal">公司汇聚了一批来自顶尖高校与互联网企业的技术人才，围绕智能算法、数据中台、云原生架构持续深耕，为金融、制造、零售、政务等行业客户提供端到端的智能化解决方案。</p>
+          <ul class="about-points">
+            <li class="reveal"><span class="point-icon">◈</span>自主研发的 AI 中台，支撑业务快速智能化落地</li>
+            <li class="reveal"><span class="point-icon">◈</span>全栈数据治理体系，让数据资产真正产生价值</li>
+            <li class="reveal"><span class="point-icon">◈</span>敏捷交付团队，平均项目上线周期缩短 40%</li>
+          </ul>
+          <div class="about-meta reveal">
+            <div class="meta-item"><span class="meta-label">统一社会信用代码</span><span class="meta-value mono">91110116MA0076TT36</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 核心业务 ===== -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">// OUR SERVICES</span>
+        <h2 class="section-title">核心<span class="grad-text">业务</span></h2>
+        <p class="section-sub">四大业务矩阵，覆盖企业智能化全生命周期</p>
+      </div>
+      <div class="cards-grid">
+        <article class="tilt-card reveal">
+          <div class="card-glow"></div>
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M24 6v8M24 34v8M6 24h8M34 24h8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="24" cy="24" r="9" stroke="currentColor" stroke-width="2.4"/><circle cx="24" cy="24" r="3" fill="currentColor"/></svg>
+          </div>
+          <h3>人工智能解决方案</h3>
+          <p>基于机器学习与深度学习的智能决策系统，涵盖计算机视觉、自然语言处理与智能推荐，让 AI 真正融入业务流程。</p>
+          <span class="card-index">01</span>
+        </article>
+        <article class="tilt-card reveal">
+          <div class="card-glow"></div>
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48" fill="none"><ellipse cx="24" cy="12" rx="14" ry="5" stroke="currentColor" stroke-width="2.4"/><path d="M10 12v24c0 2.8 6.3 5 14 5s14-2.2 14-5V12" stroke="currentColor" stroke-width="2.4"/><path d="M10 24c0 2.8 6.3 5 14 5s14-2.2 14-5" stroke="currentColor" stroke-width="2.4"/></svg>
+          </div>
+          <h3>大数据平台建设</h3>
+          <p>从数据采集、治理到可视化分析的一站式数据中台，帮助企业沉淀数据资产，驱动精细化运营与科学决策。</p>
+          <span class="card-index">02</span>
+        </article>
+        <article class="tilt-card reveal">
+          <div class="card-glow"></div>
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M14 32a8 8 0 1 1 1.2-15.9A11 11 0 0 1 36 19a7.5 7.5 0 0 1-1 14.9H14Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M24 38v-10m0 0-4 4m4-4 4 4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>云原生与系统集成</h3>
+          <p>容器化、微服务与 DevOps 全链路实践，构建高可用、可弹性伸缩的现代化 IT 基础设施。</p>
+          <span class="card-index">03</span>
+        </article>
+        <article class="tilt-card reveal">
+          <div class="card-glow"></div>
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="10" width="32" height="22" rx="2.5" stroke="currentColor" stroke-width="2.4"/><path d="M18 40h12M24 32v8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M15 24l5-6 5 4 6-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>数字化转型咨询</h3>
+          <p>结合行业最佳实践与前沿技术趋势，为企业量身定制数字化战略路线图，护航转型全过程。</p>
+          <span class="card-index">04</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 技术实力 ===== -->
+  <section class="section tech" id="tech">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">// TECHNOLOGY</span>
+        <h2 class="section-title">技术<span class="grad-text">实力</span></h2>
+        <p class="section-sub">硬核技术栈，构筑可信赖的数字底座</p>
+      </div>
+      <div class="tech-layout">
+        <div class="tech-bars">
+          <div class="tech-bar reveal" data-value="95"><div class="bar-head"><span>机器学习 / 深度学习</span><b>95%</b></div><div class="bar-track"><div class="bar-fill"></div></div></div>
+          <div class="tech-bar reveal" data-value="92"><div class="bar-head"><span>大数据架构 / 实时计算</span><b>92%</b></div><div class="bar-track"><div class="bar-fill"></div></div></div>
+          <div class="tech-bar reveal" data-value="90"><div class="bar-head"><span>云原生 / 微服务</span><b>90%</b></div><div class="bar-track"><div class="bar-fill"></div></div></div>
+          <div class="tech-bar reveal" data-value="88"><div class="bar-head"><span>信息安全 / 隐私计算</span><b>88%</b></div><div class="bar-track"><div class="bar-fill"></div></div></div>
+        </div>
+        <div class="tech-terminal reveal">
+          <div class="terminal-bar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="terminal-title">xinchao@future: ~/core</span></div>
+          <pre class="terminal-body" id="terminalBody"></pre>
+        </div>
+      </div>
+      <div class="marquee reveal" aria-hidden="true">
+        <div class="marquee-track">
+          <span>ARTIFICIAL INTELLIGENCE</span><i>◆</i><span>BIG DATA</span><i>◆</i><span>CLOUD NATIVE</span><i>◆</i><span>MACHINE LEARNING</span><i>◆</i><span>DIGITAL TWIN</span><i>◆</i>
+          <span>ARTIFICIAL INTELLIGENCE</span><i>◆</i><span>BIG DATA</span><i>◆</i><span>CLOUD NATIVE</span><i>◆</i><span>MACHINE LEARNING</span><i>◆</i><span>DIGITAL TWIN</span><i>◆</i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 联系我们 ===== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">// CONTACT</span>
+        <h2 class="section-title">联系<span class="grad-text">我们</span></h2>
+        <p class="section-sub">期待与您携手，共赴数字未来</p>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-cards">
+          <div class="contact-card reveal">
+            <div class="cc-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.1 7-11a7 7 0 1 0-14 0c0 5.9 7 11 7 11Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.6" stroke="currentColor" stroke-width="1.6"/></svg>
+            </div>
+            <h4>公司地址</h4>
+            <p>北京市怀柔区桥梓镇兴桥大街1号南楼203室</p>
+          </div>
+          <div class="contact-card reveal">
+            <div class="cc-icon">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h4>电子邮箱</h4>
+            <p><a href="mailto:busejinoer@gmail.com">busejinoer@gmail.com</a></p>
+          </div>
+          <div class="contact-card reveal">
+            <div class="cc-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 7a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7Z" stroke="currentColor" stroke-width="1.6"/><path d="M8 9h8M8 13h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+            <h4>统一社会信用代码</h4>
+            <p class="mono">91110116MA0076TT36</p>
+          </div>
+        </div>
+        <form class="contact-form reveal" onsubmit="return false;">
+          <div class="form-row">
+            <div class="form-field"><input type="text" required placeholder=" " id="fName" /><label for="fName">您的姓名</label></div>
+            <div class="form-field"><input type="email" required placeholder=" " id="fMail" /><label for="fMail">联系邮箱</label></div>
+          </div>
+          <div class="form-field"><textarea rows="5" required placeholder=" " id="fMsg"></textarea><label for="fMsg">合作意向 / 留言内容</label></div>
+          <button class="btn btn-primary btn-full" type="submit" id="sendBtn"><span>发送消息</span><i class="btn-arrow">→</i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 页脚 ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-text">心潮科技<em>XINCHAO&nbsp;TECH</em></span>
+        <p>心之所向 · 潮起未来</p>
+      </div>
+      <div class="footer-info">
+        <p>北京心潮科技有限公司 © <span id="year"></span> 版权所有</p>
+        <p>地址：北京市怀柔区桥梓镇兴桥大街1号南楼203室</p>
+        <p>邮箱：<a href="mailto:busejinoer@gmail.com">busejinoer@gmail.com</a>&nbsp;&nbsp;|&nbsp;&nbsp;统一社会信用代码：<span class="mono">91110116MA0076TT36</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
